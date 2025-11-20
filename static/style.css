@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: url("fondo_nubes.gif") no-repeat center center fixed;
+  background-size: cover;
+  background-color: #000; /* fallback si el gif no carga */
+  color: var(--blanco);
+}
+:root {
+  --azul-umsa: #0b3a82;
+  --azul-oscuro: #082a5a;
+  --dorado-ala: #d1a92f;
+  --amarillo-senal: #f59e0b;
+  --gris-metal: #dadee5;
+  --blanco: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(180deg, var(--azul-oscuro), var(--azul-umsa));
+  color: var(--blanco);
+}
+
+.header {
+  text-align: center;
+  padding: 24px 16px;
+  position: relative;
+}
+
+.header .logo {
+  width: 120px;
+  height: auto;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.4));
+}
+
+.titulos {
+  margin-top: 8px;
+}
+
+.titulos h1 {
+  font-size: 28px;
+  margin: 8px 0 4px;
+  letter-spacing: 0.5px;
+}
+
+.titulos h2 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  color: var(--gris-metal);
+}
+
+.contenedor {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.4); /* Fondo oscuro semitransparente */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 20px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+}
+
+.ilustracion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 16px 0 24px;
+}
+.nube {
+  width: 100px;
+  height: 60px;
+  background: var(--blanco);
+  border-radius: 30px;
+  box-shadow: 0 6px 0 rgba(0,0,0,0.2) inset;
+}
+.sol {
+  width: 48px;
+  height: 48px;
+  background: var(--amarillo-senal);
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px rgba(245, 158, 11, 0.25);
+}
+
+.formulario {
+  text-align: center;
+}
+
+.input-file {
+  display: inline-block;
+  padding: 10px 14px;
+  background: rgba(255,255,255,0.12);
+  border: 1px dashed rgba(255,255,255,0.4);
+  border-radius: 8px;
+}
+
+.boton {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 12px 22px;
+  background: var(--amarillo-senal);
+  color: var(--blanco);
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(245,158,11,0.35);
+}
+.boton:hover {
+  filter: brightness(1.05);
+}
+
+.footer {
+  text-align: center;
+  color: var(--gris-metal);
+  font-size: 14px;
+  padding: 18px;
+}
+

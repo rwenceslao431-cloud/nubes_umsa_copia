@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Acerca de la Carrera</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav style="background: rgba(255,255,255,0.1); padding: 10px 20px; display: flex; justify-content: space-between; align-items: center;">
+  <div style="font-weight: bold;">☁️ Nubes UMSA</div>
+  <div>
+    <a href="{{ url_for('home') }}" style="color: #fff; margin-right: 16px; text-decoration: none;">Inicio</a>
+    <a href="{{ url_for('acerca') }}" style="color: #fff; text-decoration: none;">Acerca</a>
+  </div>
+</nav>
+
+<header class="header">
+  <img class="logo" src="{{ url_for('static', filename='logo_umsa.png') }}" alt="Logo Carrera de Aeronáutica UMSA">
+  <div class="titulos">
+    <h1>Historia de la Carrera de Aeronáutica</h1>
+  </div>
+</header>
+
+<main class="contenedor">
+  <section class="card" style="text-align: justify;">
+    <p>
+      A raíz de que en la década de los años cuarenta empezaron a operar en nuestro país innumerables empresas aéreas de transporte, se intensifica la demanda de pilotos civiles y personal técnico capacitado en mantenimiento y reparación de aeronaves.
+    </p>
+    <p>
+      Con el propósito de llenar estas exigencias, el 17 de abril de 1967 se crea la Carrera Mecánica de Aviación en el seno de lo que en ese entonces se conocía como Escuela Técnica fundada por el Técnico español Vicente Burgaleta y que contaba con las especialidades de Topografía, Construcciones Civiles, Química Industrial y Mecánica, surgiendo de esta última la especialidad de Mecánica de Aviación en el nivel de Técnico Medio, contratando profesores e instructores principalmente de la Fuerza Aérea Boliviana, quienes por su formación y especialización en el exterior, cumplieron a satisfacción los requerimientos de personal docente de la nueva unidad académica.
+    </p>
+    <p>
+      Luego de varias y profundas transformaciones al interior de la Universidad Mayor de San Andrés, la Escuela Técnica se jerarquiza adoptando rango de Facultad, la misma que se consolida el 20 de enero de 1986, según Resolución del HCU Nº 004/83 con el nombre de Facultad Técnica.
+    </p>
+    <p>
+      El año 1986, como resultado acorde con el proceso de evolución y cambio curricular se implementa el Nivel de Técnico Superior en Mecánica de Aviación. A partir de la gestión 1999, previo cumplimiento de los trámites pertinentes, aprobación en el Consejo Académico Universitario y Resolución del Honorable Consejo Universitario HCU Nº 029/99 de fecha 10/02/99, entra en vigencia el nuevo plan de estudios que contempla el nivel de Licenciatura.
+    </p>
+  </section>
+</main>
+
+<footer class="footer">
+  Desarrollado por Wenceslao — Facultad de Tecnología, Carrera de Aeronáutica UMSA
+</footer>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Resultado de Clasificación</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- Navegación -->
+<nav style="background: rgba(255,255,255,0.1); padding: 10px 20px; display: flex; justify-content: space-between; align-items: center;">
+  <div style="font-weight: bold;">☁️ Nubes UMSA</div>
+  <div>
+    <a href="{{ url_for('index') }}" style="color: #fff; margin-right: 16px; text-decoration: none;">Inicio</a>
+    <a href="#acerca" style="color: #fff; text-decoration: none;">Acerca</a>
+  </div>
+</nav>
+
+<!-- Encabezado -->
+<header class="header" style="text-align: center; padding: 20px;">
+  <img class="logo" src="{{ url_for('static', filename='logo_umsa.png') }}" alt="Logo Carrera de Aeronáutica UMSA" style="max-width: 120px;">
+  <div class="titulos">
+    <h1>Resultado del Clasificador</h1>
+    <h2>Facultad de Tecnología – Carrera de Aeronáutica UMSA</h2>
+  </div>
+</header>
+
+<!-- Contenido principal -->
+<main class="contenedor" style="display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 40px;">
+  <section class="card" style="background-color: #ffffff22; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); text-align: center; max-width: 600px;">
+
+    <h2 style="color: #00c3ff;">🌤 Tipo de nube detectado:</h2>
+    <h1 style="font-size: 2.5em; margin: 10px 0; color: #ffffff;">{{ tipo_nube }}</h1>
+
+    <p style="color: #dadee5; font-size: 1.1em; margin: 10px 0;">Altitud típica: <strong>{{ ficha.altitud }}</strong></p>
+    <p style="color: #dadee5; font-size: 1em; margin: 10px 0;">{{ ficha.descripcion }}</p>
+    <p style="color: #a0e0ff; font-size: 1.1em; margin: 10px 0;">🔍 Precisión del modelo: <strong>{{ probabilidad }}%</strong></p>
+
+    <img src="{{ imagen_subida }}" alt="Imagen subida" style="max-width: 100%; border-radius: 12px; margin-top: 20px;">
+
+    <!-- Botones -->
+    <div style="margin-top: 30px;">
+      <a href="{{ url_for('index') }}" style="padding: 10px 20px; background-color: #0077cc; color: white; text-decoration: none; border-radius: 5px; margin-right: 10px;">🔙 Volver al inicio</a>
+      <a href="{{ imagen_subida }}" download style="padding: 10px 20px; background-color: #00aa88; color: white; text-decoration: none; border-radius: 5px;">⬇️ Descargar imagen</a>
+    </div>
+
+  </section>
+</main>
+
+<!-- Pie de página -->
+<footer class="footer" style="text-align: center; padding: 20px; font-size: 0.9em; color: #ccc;">
+  Desarrollado por Wenceslao — Facultad de Tecnología, Carrera de Aeronáutica UMSA
+</footer>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reconocimiento de Nubes</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- Navegación -->
+<nav style="background: rgba(255,255,255,0.1); padding: 10px 20px; display: flex; justify-content: space-between; align-items: center;">
+  <div style="font-weight: bold;">☁️ Nubes UMSA</div>
+  <div>
+    <a href="{{ url_for('index') }}" style="color: #fff; margin-right: 16px; text-decoration: none;">Inicio</a>
+    <a href="#acerca" style="color: #fff; text-decoration: none;">Acerca</a>
+  </div>
+</nav>
+
+<!-- Encabezado -->
+<header class="header" style="text-align: center; padding: 20px;">
+  <img class="logo" src="{{ url_for('static', filename='logo_umsa.png') }}" alt="Logo Carrera de Aeronáutica UMSA" style="max-width: 120px;">
+  <div class="titulos">
+    <h1>Reconocimiento de Nubes</h1>
+    <h2>Facultad de Tecnología – Carrera de Aeronáutica UMSA</h2>
+  </div>
+</header>
+
+<!-- Contenido principal -->
+<main class="contenedor" style="display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 40px;">
+  <section class="card" style="background-color: #ffffff22; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); text-align: center;">
+
+    <!-- Ilustración -->
+    <div class="ilustracion" style="margin-bottom: 20px;">
+      <div class="sol" style="width: 60px; height: 60px; background: yellow; border-radius: 50%; margin: auto;"></div>
+      <div class="nube" style="width: 100px; height: 60px; background: #ccc; border-radius: 50%; margin: 10px auto;"></div>
+      <div class="nube" style="width:70px; height: 40px; background: #bbb; border-radius: 50%; margin: auto;"></div>
+    </div>
+
+    <!-- Mensaje de error -->
+    {% if error %}
+      <div style="color: #ffdddd; background: #660000; padding: 10px; border-radius: 8px; margin-bottom: 12px;">
+        {{ error }}
+      </div>
+    {% endif %}
+
+    <!-- Formulario -->
+    <form class="formulario" action="{{ url_for('upload_image') }}" method="post" enctype="multipart/form-data">
+      <label class="input-file" style="display: block; margin-bottom: 20px;">
+        <input type="file" name="imagen" accept="image/*" required style="padding: 10px;">
+      </label>
+      <button class="boton" type="submit" style="padding: 10px 20px; font-size: 16px; background-color: #0077cc; color: white; border: none; border-radius: 5px;">Subir imagen</button>
+    </form>
+  </section>
+</main>
+
+<!-- Pie de página -->
+<footer class="footer" style="text-align: center; padding: 20px; font-size: 0.9em; color: #ccc;">
+  Desarrollado por Wenceslao — Facultad de Tecnología, Carrera de Aeronáutica UMSA
+</footer>
+
+</body>
+</html>
+
+
+

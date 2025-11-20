@@ -1,0 +1,28 @@
+{
+  "Cumulus": {
+    "altitud": "1.000 – 2.000 m",
+    "descripcion": "Nubes densas y blancas con forma de algodón. Se forman por convección térmica.",
+    "clima": "Buen tiempo, aunque pueden evolucionar a tormentas.",
+    "aeronautica": "Turbulencia ligera a moderada. Visibilidad generalmente buena."
+  },
+  "Cirrus": {
+    "altitud": "6.000 – 12.000 m",
+    "descripcion": "Nubes finas y fibrosas compuestas por cristales de hielo. Suelen indicar cambios meteorológicos.",
+    "clima": "Tiempo estable, pero pueden preceder a frentes.",
+    "aeronautica": "Sin turbulencia significativa. Indicadores de jet stream."
+  },
+  "Stratus": {
+    "altitud": "0 – 2.000 m",
+    "descripcion": "Nubes grises que cubren el cielo como una capa uniforme. Pueden generar llovizna.",
+    "clima": "Cielo cubierto, posible llovizna.",
+    "aeronautica": "Visibilidad reducida. Posible niebla en superficie."
+  },
+  "Cumulonimbus": {
+    "altitud": "2.000 – 16.000 m",
+    "descripcion": "Nubes de gran desarrollo vertical. Asociadas a tormentas eléctricas y precipitaciones intensas.",
+    "clima": "Tormentas, granizo, rayos, lluvia intensa.",
+    "aeronautica": "Turbulencia severa. Peligro para vuelos. Evitar penetración."
+  }
+}
+
+
